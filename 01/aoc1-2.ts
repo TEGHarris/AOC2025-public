@@ -23,14 +23,15 @@ let total0s = 0;
 for (let i of instructions) {
   if (i.direction == "R") {
     for (let j = 0; j < i.value; j++) {
-      position = wrapAround(position+1);
-      if (position === 0) total0s++
+      position = wrapAround(position + 1);
+      if (position === 0) total0s++;
     }
   } else {
     for (let j = 0; j < i.value; j++) {
-      position = wrapAround(position-1);
-      if (position === 0) total0s++
+      position = wrapAround(position - 1);
+      if (position === 0) total0s++;
     }
   }
-  }
+}
 console.log(total0s);
+export {};
