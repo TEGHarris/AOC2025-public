@@ -43,8 +43,8 @@ for (let row = 0; row < grid.length; row++) {
     if (grid[row][col] === "@") {
       if (checkLocation(row, col)) {
         validLocations++;
-        console.log(`Valid roll at ${row}, ${col}`)
-    }
+        console.log(`Valid roll at ${row}, ${col}`);
+      }
     }
   }
 }

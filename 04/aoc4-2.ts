@@ -41,7 +41,7 @@ const removeRolls = () => {
     for (let col = 0; col < grid[0].length; col++) {
       if (grid[row][col] === "@") {
         if (checkLocation(row, col)) {
-            grid[row][col] = "."
+          grid[row][col] = ".";
           validLocations++;
           console.log(`Valid roll at ${row}, ${col}`);
         }
@@ -51,7 +51,7 @@ const removeRolls = () => {
 };
 let originalGrid: string[][] = [];
 do {
-    originalGrid = grid.map((r: string[]) => r.slice());
-    removeRolls();
+  originalGrid = grid.map((r: string[]) => r.slice());
+  removeRolls();
 } while (JSON.stringify(originalGrid) !== JSON.stringify(grid));
 console.log(validLocations);
